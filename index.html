@@ -26,16 +26,16 @@
                     <li><a href="#">Servicios</a></li>
                     <li><a href="#">Contactos</a></li>
                 </ul>
-            </nav>
-            <nav class="idioma">
-                <ul>
-                    <li><a href="#">ES</a></li>
-                    <li><a href="#">EN</a></li>
-                </ul>
+                <div class="idioma">
+                    <ul>
+                        <li><a href="#">ES</a></li>
+                        <li><a href="#">EN</a></li>
+                    </ul>
+                </div>
             </nav>
             <div class="mensaje-principal">
                 <h1>Las mejores raquetas para <br>jugar <span>Tennis</span></h1>
-                <button>acerca de nosotros
+                <button class="boton-circular">acerca de nosotros
                     <object type="image/svg+xml" data="imagenes/flecha.svg"></object>
                 </button>
             </div>
@@ -48,9 +48,47 @@
             <p>Conoce nuestras raquetas y aprende a jugar<br> Tennis como un profesional.</p>
         </div>
         <div class="boton-historia">
-            <button><span>HISTORIA</span>
+            <button class="boton-circular"><span>HISTORIA</span>
                 <object type="image/svg+xml" data="imagenes/flecha.svg"></object>
             </button>
+        </div>
+    </section>
+    <section>
+        <div class='walkthrough show reveal'>
+            <div class='walkthrough-body'>
+                <ul class='screens animate'>
+                    <li class='screen active'>
+                        <h2>Nuestras <span>Raquetas1</span></h2>
+                        <p>Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional</p>
+                    </li>
+                    <li class='screen'>
+                        <h2>Nuestras <span>Raquetas2</span></h2>
+                        <p>Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional</p>
+                    </li>
+                    <li class='screen'>
+                        <h2>Nuestras <span>Raquetas3</span></h2>
+                        <p>Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional</p>
+                    </li>
+                    <li class='screen'>
+                        <h2>Nuestras <span>Raquetas4</span></h2>
+                        <p>Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional</p>
+                    </li>
+                </ul>
+            </div>
+            <div class='walkthrough-pagination'>
+                <a class='dot active'></a>
+                <a class='dot'></a>
+                <a class='dot'></a>
+                <a class='dot'></a>
+            </div>
+            <div>
+                <button class='prev-screen'>
+                    <i class="fas fa-caret-left"></i>
+                </button>
+                <button class='next-screen'>
+                    <i class="fas fa-caret-right"></i>
+                </button>
+            </div>
         </div>
     </section>
     <section class="banner">

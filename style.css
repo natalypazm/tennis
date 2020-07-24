@@ -2,12 +2,13 @@
 	margin:0;
 	padding:0;
 }
+html{height:100%;}
  
 body {
     background:#FFFFFA;
     font-family: 'Mulish', sans-serif;
 }
-button{
+button.boton-circular{
     font-family: 'Mulish', sans-serif;
     background: transparent;
     border: 1px solid #fff;
@@ -69,10 +70,6 @@ header nav ul li a {
 header nav ul li span {
 	margin-right:10px;
 }
- 
-header nav ul li a:hover {
-	background:#037E8C;
-}
 .idioma{
     right: 94px;
     position: absolute;
@@ -114,7 +111,7 @@ header nav ul li a:hover {
     font-size: 15px;
     margin:20px 50px 0 0;
 }
-.bajada h2{
+.bajada h2,.screens.animate h2{
     font-size: 50px;
     line-height: 57px;
     letter-spacing: -0.06px;
@@ -133,13 +130,164 @@ header nav ul li a:hover {
     bottom: -11px;
     position: relative;
 }
-.boton-historia button{
+.boton-historia button.boton-circular{
     color:#282e47;
     border:1px solid #282e47;
 }
 .boton-historia button span{
     margin-right: 62.08px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============CARRUSEL================== */
+ .walkthrough {
+     background-image:url("imagenes/fondo-carrusel.jpg");
+     background-repeat:no-repeat;
+     background-position:center;
+	 border-radius: 0;
+	 display: none;
+	 flex-direction: column;
+	 flex: 0 0 auto;
+	 font-size: 14px;
+     height: 468px;
+     width:530px;
+	 overflow: hidden;
+	 z-index: 1000;
+}
+ .walkthrough.show {
+	 display: flex;
+	 opacity: 0;
+	 transform: translateY(72px);
+}
+ .walkthrough.reveal {
+	 opacity: 1;
+	 transform: translateY(0);
+}
+.prev-screen,.next-screen {
+    border: 1px solid #fff;
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    color:#fff;
+    font-size:20px !important;
+    margin-top: 360px;
+    left: 200px;
+    position: relative;
+    margin-right:15px;
+
+}
+.prev-screen:hover,.next-screen:hover,.prev-screen:active,.next-screen:active {
+	 color: white;
+	 transform-origin: center;
+	 transform: scale(1.1);
+}
+.prev-screen {
+     background:transparent;
+}
+.next-screen {
+    background: #cbe346;
+    color: #fff;
+    border: none;
+    box-shadow: 2px 4px 10px 1px #555555;
+}
+ .walkthrough .walkthrough-body .screens {
+	 flex: 1;
+	 position: relative;
+	 margin: 0 -16px;
+	 padding: 0;
+	 order: 2;
+}
+ .walkthrough .walkthrough-body .screens .screen {
+	 position: absolute;
+	 list-style-type: none;
+}
+ .walkthrough .walkthrough-body .media {
+	 background: rgba(255, 255, 255, 0.25);
+	 border-radius: 132px;
+	 height: 132px;
+	 margin: 32px auto;
+	 width: 132px;
+}
+.screens.animate h2{color:#fff;line-height:64px;}
+.screens.animate h2 span{font-weight:bold;}
+ .walkthrough .walkthrough-body p {
+    line-height: 30px;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0.51px;
+    margin-top:25px;
+}
+ .walkthrough .walkthrough-pagination {
+    display: flex;
+    bottom: 145px;
+    position: absolute;
+    left: 200px;
+}
+ .walkthrough .walkthrough-pagination .dot {
+	 background:#fff;
+	 border-radius: 8px;
+	 height: 10px;
+	 margin: 0 8px;
+	 transform: scale(0.75);
+	 transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	 width: 10px;
+}
+ .walkthrough .walkthrough-pagination .dot.active {
+	 background: #cbe346;
+	 transform: scale(1);
+	 transition-delay: 0.4s;
+}
+ .walkthrough .screens .screen {
+	 opacity: 0;
+	 position: absolute;
+	 transform: translateX(-72px);
+     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+     padding:50px 26px 10px 214px;
+}
+ .walkthrough .screens .screen.active {
+	 opacity: 1;
+	 transform: translateX(0) scale(1);
+	 transition-delay: 0.4s;
+}
+ .walkthrough .screens .screen.active ~ .screen {
+	 opacity: 0;
+	 transform: translateX(72px);
+}
+ .walkthrough .screens .screen.active .media .status-badge {
+	 opacity: 1;
+	 transform: scale(1.75);
+}
+
+
+
 /* ==============FOOTER================== */
 footer{
     background:#cbe346;
@@ -210,14 +358,14 @@ footer nav ul, .redes-sociales{
         z-index:100;
     }
     .bt-menu {
-	display:block;
-}
+	display:block; 
+    }
 	header nav ul li {
 		display:block;
 		float:none;
 		border-bottom:1px solid rgba(255,255,255, .3);
 	}
- 
+    header nav ul li a{padding:20px;}
 	.menu_bar {
         width:100%;
         border:none;
@@ -239,6 +387,17 @@ footer nav ul, .redes-sociales{
 		float:right;
 		font-size:40px;
     }
+    nav .idioma{
+        display: flex;
+        justify-content: center;
+        position: initial;
+        margin-top:30px;
+        
+    }
+    nav .idioma ul{display:inline-flex;}
+    nav .idioma ul li{border:none;border-right:1px solid rgba(255,255,255, .3);}
+    nav .idioma ul li:last-child{border:none;}
+    nav .idioma ul li a {padding: 0px 10px;}
     .mensaje-principal {
         position: absolute;
         top: 20%;
@@ -272,9 +431,17 @@ footer nav ul, .redes-sociales{
         margin:15px 0;
     }
 
+    .walkthrough{width:100%;}
+    .walkthrough .screens .screen{padding:50px 30px 0px 30px;}
+    .prev-screen, .next-screen,.walkthrough .walkthrough-paginationgit {left:150px;}
+
 
     footer{
         padding:30px 15px;;
     }
     footer nav ul{display:block;}
+    .logo-footer{
+        bottom: 110px;
+        width: 40px;
+    }
 }
