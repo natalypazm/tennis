@@ -51,6 +51,7 @@ header {
     border-right:2px solid #fff;
     padding:25px 32px 25px 36px;
 }
+nav{display:flex;}
 header nav ul {
 	overflow:hidden;
 	list-style:none;
@@ -137,36 +138,6 @@ header nav ul li span {
 .boton-historia button span{
     margin-right: 62.08px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==============CARRUSEL================== */
  .walkthrough {
      background-image:url("imagenes/fondo-carrusel.jpg");
@@ -286,8 +257,6 @@ header nav ul li span {
 	 transform: scale(1.75);
 }
 
-
-
 /* ==============FOOTER================== */
 footer{
     background:#cbe346;
@@ -356,6 +325,7 @@ footer nav ul, .redes-sociales{
         position: fixed;
         background:#cbe346;
         z-index:100;
+        display:block !important;
     }
     .bt-menu {
 	display:block; 
