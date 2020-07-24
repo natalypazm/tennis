@@ -412,7 +412,7 @@ footer nav ul, .redes-sociales{
     .mensaje-principal h1{
         margin-bottom:30px;
     }
-    button{padding:11.5px 26px;}
+    button.boton-circular{padding:11.5px 26px;}
     
 
 
