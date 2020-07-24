@@ -5,8 +5,25 @@
  
 body {
     background:#FFFFFA;
-    font-family:Roboto,sans-serif;
+    font-family: 'Mulish', sans-serif;
 }
+button{
+    font-family: 'Mulish', sans-serif;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 11.5px 37px;
+    border-radius: 40px;
+    letter-spacing: 1.01px;
+    line-height: 28px;
+}
+button object{
+  height: 23px;
+  vertical-align:middle;
+}
+svg{fill:#fff;}
 /* ===========BANNER================== */
 main{
     background-image: url(./imagenes/banner.jpg);
@@ -72,18 +89,10 @@ header nav ul li a:hover {
     line-height:68px;
     letter-spacing: -0.05px;
     color:#fff;
+    margin-bottom:50px;
 }
 .mensaje-principal span{
     color:#cbe346;
-}
-.mensaje-principal button{
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    font-size: 13px;
-    text-transform: uppercase;
-    padding: 15px;
-    border-radius: 40px;
 }
 .banner img{
   display: block;
@@ -97,11 +106,40 @@ header nav ul li a:hover {
     background:#f3f4f8;
     display:flex;
     justify-content:center;
+    padding:92px 0;
 }
 .texto-verde{
     color:#cbe346;
+    letter-spacing: 1.87px;
+    font-size: 15px;
+    margin:20px 50px 0 0;
 }
-
+.bajada h2{
+    font-size: 50px;
+    line-height: 57px;
+    letter-spacing: -0.06px;
+    font-weight: 500;
+}
+.bajada p{
+    color: #787878;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.51px;
+    margin-top: 30px;
+}
+.boton-historia{
+    display: inline-block;
+    align-self: flex-end;
+    bottom: -11px;
+    position: relative;
+}
+.boton-historia button{
+    color:#282e47;
+    border:1px solid #282e47;
+}
+.boton-historia button span{
+    margin-right: 62.08px;
+}
 /* ==============FOOTER================== */
 footer{
     background:#cbe346;
@@ -183,6 +221,7 @@ footer nav ul, .redes-sociales{
 	.menu_bar {
         width:100%;
         border:none;
+        padding:25px;
 	}
  
 	.menu_bar .bt-menu {
@@ -204,11 +243,38 @@ footer nav ul, .redes-sociales{
         position: absolute;
         top: 20%;
         transform:none;
-        padding: 35px;
+        padding: 25px;
     }
     .mensaje-principal h1{
         font-size:38px;
         line-height:normal;
     }
 
+    .mensaje-principal h1{
+        margin-bottom:30px;
+    }
+    button{padding:11.5px 26px;}
+    
+
+
+    .bajada{
+        padding:50px 15px;
+        display:block;
+    }
+    .bajada .texto-verde{
+        margin:0 0 15px 0;
+    }
+    .bajada h2{
+        font-size: 29px;
+        line-height: 40px;
+    }
+    .bajada p{
+        margin:15px 0;
+    }
+
+
+    footer{
+        padding:30px 15px;;
+    }
+    footer nav ul{display:block;}
 }
